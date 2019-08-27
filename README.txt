@@ -1,1 +1,0 @@
-EORA - your personal bot
