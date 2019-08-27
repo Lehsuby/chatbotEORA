@@ -1,9 +1,9 @@
 # EORA - your personal bot
 
-# Test ChatBot EORA
+# _Test ChatBot EORA
 
 ## Description:
-Test ChatBot on *Python 3.5*, which can predict cat and bread. 
+Test ChatBot on *Python 3.5* on localhost, which can predict cat and bread. 
 
 ## Installation:
 1. Download:
@@ -64,11 +64,16 @@ Test ChatBot on *Python 3.5*, which can predict cat and bread.
     ```
     
 ## QUICK START
-First run:
+### * First run:
 ![Hello page](https://github.com/Lehsuby/chatbotEORA/blob/master/1.png?raw=true)
-Insert your nickname and then give main page:
+### * Insert your nickname and then give main page:
 ![Main page](https://github.com/Lehsuby/chatbotEORA/blob/master/2.png?raw=true)
-Some examles:
+### * Some examples:
 ![Main page](https://github.com/Lehsuby/chatbotEORA/blob/master/3.png?raw=true)
 ![Main page](https://github.com/Lehsuby/chatbotEORA/blob/master/4.png?raw=true)
 ![Main page](https://github.com/Lehsuby/chatbotEORA/blob/master/5.png?raw=true)
+
+# Conclusion
+Thanks TensorFlow for their scrypts.
+
+_Not for commercial use
