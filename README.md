@@ -1,6 +1,6 @@
 # EORA - your personal bot
 
-# _Test ChatBot EORA
+# _Test ChatBot EORA_
 
 ## Description:
 Test ChatBot on *Python 3.5* on localhost, which can predict cat and bread. 
@@ -76,4 +76,4 @@ Test ChatBot on *Python 3.5* on localhost, which can predict cat and bread.
 # Conclusion
 Thanks TensorFlow for their scrypts.
 
-_Not for commercial use
+__Not for commercial use__
