@@ -1,10 +1,9 @@
-EORA - your personal bot
+# EORA - your personal bot
 
-Build Status
+# -Test ChatBot EORA-
 
-Note that Yii 1.1 has reached end of life and won't receive updates except security fixes. Please start new projects using Yii 2.
-
-INSTALLATION
+## Installation:
+1. 
 Please make sure the release file is unpacked under a Web-accessible directory. You shall see the following files and directories:
 
   demos/               demos
