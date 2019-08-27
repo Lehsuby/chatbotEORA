@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 from os.path import join, dirname
 
 setup(name='chatboteora',
-        version='0.1',
+        version='0.2',
         description='Chatbot',
         long_description=open(join(dirname(__file__), 'README.txt')).read(),
         classifiers=[
