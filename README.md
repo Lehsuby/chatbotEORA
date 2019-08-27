@@ -12,7 +12,7 @@ Test ChatBot on *Python 3.5* on localhost, which can predict cat and bread.
 
      or
      
-  * Install package and download additional files for tensorflow from [Google Drive](https://drive.google.com/open?id=1HA0MunsTQbvg4x-hGlwy2zxE29xq2Spv)
+  * Install package and download additional files for tensorflow in (my_app) from [Google Drive](https://drive.google.com/open?id=1HA0MunsTQbvg4x-hGlwy2zxE29xq2Spv)
 ```python
     pip install chatboteora
 ```
