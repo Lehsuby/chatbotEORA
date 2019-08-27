@@ -5,7 +5,7 @@ from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 import time as ttime
 from datetime import datetime
 import os
-from subprocess import call
+from subprocess import call, check_output
 
 con = psycopg2.connect(dbname='db_chatbotEORA', user='tu', host='localhost', password='qwerty')
 con.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
@@ -115,16 +115,14 @@ def get_last_status(user_id):
 
 
 def prediction(name_file, user_id):
-    f = open('src/%s_logfile_1.txt' % user_id, 'w')
     call_string = "python scripts/label_image.py --image src/%s" % (name_file)
-    call(call_string, stdout=f, shell=True)
-    with open('src/%s_logfile_1.txt' % user_id, 'r') as f:
-        data = f.readlines()
-    cat = data[3]
-    cat = float(cat[12:19])
-    bread = data[4]
-    bread = float(bread[13:20])
-    os.remove("src/%s_logfile_1.txt" % user_id)
+
+    data = check_output(call_string, shell=True)
+    data = str(data)
+    i = data.find("cat")
+    cat = float(data[i+12:i+19])
+    i = data.find("bread")
+    bread = float(data[i+13:i+20])
     os.remove("src/%s" % name_file)
     if cat > bread:
         return ITS_CAT

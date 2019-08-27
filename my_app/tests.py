@@ -39,12 +39,6 @@ class TestPostgresql(unittest.TestCase):
             with self.assertRaises(OSError):
                 os.kill(pid, 0)
 
-    def test_dsn_and_url(self):
-        pgsql = testing.postgresql.Postgresql(port=12345, auto_start=0)
-        self.assertEqual({'database': 'test', 'host': '127.0.0.1', 'port': 12345, 'user': 'postgres'},
-                         pgsql.dsn())
-        self.assertEqual("postgresql://postgres@127.0.0.1:12345/test", pgsql.url())
-
 class TestBot(unittest.TestCase):
     def setUp(self):
         print('### Setting up flask server ###')
@@ -79,24 +73,15 @@ class TestBot(unittest.TestCase):
 <div class="name_bot">EORA - your personal bot</div>
 <scroll-container>
 Привет, 000!!! Я помогу отличить кота от хлеба! Объект перед тобой квадратный?<br />2019-08-27 02:49<br />"""
-        if my_app.get_history("000") == history_000:
-            print("Test get_history(000) is OK")
-        else:
-            print("Test get_history(000) is Fail")
+        self.assertEqual(my_app.get_history("000"),history_000)
 
     def test_get_last_status(self):
         last_status_000 = 0
-        if my_app.get_last_status("000") == last_status_000:
-            print("Test get_last_status(000) is OK")
-        else:
-            print("Test get_last_status(000) is Fail")
+        self.assertEqual(my_app.get_last_status("000"), last_status_000)
 
     def test_prediction_and_test_post(self):
         shutil.copy(r'Leicester_City.png',r'src/Leicester_City.png')
-        if my_app.prediction("Leicester_City.png","909") == ITS_CAT:
-            print("Test prediction(Leicester_City.png,999) is OK")
-        else:
-            print("Test prediction(Leicester_City.png,999) is Fail")
+        self.assertEqual(my_app.prediction("Leicester_City.png","909"),ITS_CAT)
 
     def test_get_bot_response(self):
         resp = self.app.get('/eora/api/')
