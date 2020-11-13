@@ -21,7 +21,7 @@ scramp==1.1.0
 six==1.12.0
 SQLAlchemy==1.2.19
 tensorboard==1.14.0
-tensorflow==1.14.0
+tensorflow==2.3.1
 tensorflow-estimator==1.14.0
 termcolor==1.1.0
 testing.common.database==2.0.3
